@@ -1,0 +1,14 @@
+# version: 2
+# models:
+#   - name: session_summary
+#     description: "Analytics model for session data"
+#     columns:
+#       - name: sessionId
+#         description: "identifies the session where the user logged to a channel at a time"
+#         data_tests:
+#         - unique
+#         - not_null
+#       - name: channel
+#         description: "Identifies the webpage user logged to"
+#         data_tests:
+#         - not_null
