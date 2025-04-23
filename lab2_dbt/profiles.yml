@@ -1,0 +1,26 @@
+lab2_dbt:
+  outputs:
+    dev:
+      account: "{{ env_var('DBT_ACCOUNT') }}"
+      database: "{{ env_var('DBT_DATABASE') }}"
+      password: "{{ env_var('DBT_PASSWORD') }}"
+      role: "{{ env_var('DBT_ROLE') }}"
+      threads: 1
+      schema: analytics
+      type: "{{ env_var('DBT_TYPE') }}"
+      user: "{{ env_var('DBT_USER') }}"
+      warehouse: "{{ env_var('DBT_WAREHOUSE') }}"
+  target: dev
+# lab2_dbt:
+#   outputs:
+#     dev:
+#       account: "sfedu02-ksb65579"
+#       database: "user_db_lobster1"
+#       password: "Snowflake@1234"
+#       role: "training_role"
+#       threads: 1
+#       schema: analytics
+#       type: "snowflake"
+#       user: "lobster"
+#       warehouse: "lobster_query_wh"
+#   target: dev

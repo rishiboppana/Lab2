@@ -1,0 +1,40 @@
+version: 2
+sources:
+  - name: raw
+    database: "user_db_lobster1"
+    schema: raw
+    tables:
+      - name: market_price
+        columns:
+          - name: symbol
+            tests:
+              - not_null
+          - name: open
+            tests:
+              - not_null
+          - name: close
+            tests:
+              - not_null
+          - name: date
+            tests:
+              - not_null
+
+# sources:
+#   - name: raw
+#     database: USER_DB_LOBSTER1
+#     schema: raw
+#     tables:
+#       - name: market_price
+#         description: "Raw data of stock with open,close,high,low and date columns"
+#         tests :
+#           - not_null 
+#           - unique
+  # - name: analytics
+  #   database: USER_DB_LOBSTER
+  #   schema: analytics
+  #   tables:
+  #     - name: session_summary
+  #       description: "Session summary table"
+  #       data tests:
+  #         - unique
+  #         - not_null
